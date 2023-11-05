@@ -1,0 +1,9 @@
+C:\Users\eduardm\Documents\Visual Studio 2008\Projects\PocketMan\PocketMan\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\eduardm\Documents\Visual Studio 2008\Projects\PocketMan\PocketMan\obj\Debug\PocketMan.Form1.resources
+C:\Users\eduardm\Documents\Visual Studio 2008\Projects\PocketMan\PocketMan\obj\Debug\PocketMan.Properties.Resources.resources
+C:\Users\eduardm\Documents\Visual Studio 2008\Projects\PocketMan\PocketMan\obj\Debug\PocketMan.csproj.GenerateResource.Cache
+C:\Users\eduardm\Documents\Visual Studio 2008\Projects\PocketMan\PocketMan\bin\Debug\PocketMan.exe
+C:\Users\eduardm\Documents\Visual Studio 2008\Projects\PocketMan\PocketMan\bin\Debug\PocketMan.pdb
+C:\Users\eduardm\Documents\Visual Studio 2008\Projects\PocketMan\PocketMan\obj\Debug\PocketMan.exe
+C:\Users\eduardm\Documents\Visual Studio 2008\Projects\PocketMan\PocketMan\obj\Debug\PocketMan.pdb
+C:\Users\eduardm\Documents\Visual Studio 2008\Projects\PocketMan\PocketMan\obj\Debug\DirectorySelectorForm.resources
