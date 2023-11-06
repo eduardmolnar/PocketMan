@@ -13,13 +13,11 @@ using System.IO;
 namespace PocketMan
 {
 
-    public partial class Form1 : Form
+    public partial class PocketMan : Form
     {
         private SystemSound audioRdBtn = SystemSounds.Beep; // radio button selection
-        private DirectorySelectorForm selectedDirectory; // selected file for play
-        private SoundPlayer player = new SoundPlayer(); // class-level sound player instance so it can be accessed from all methods
 
-        public Form1()
+        public PocketMan()
         {
             InitializeComponent();
             mainWindowTab.SelectedIndexChanged += mainWindowTab_SelectedIndexChanged; // check tab change event
@@ -48,7 +46,7 @@ namespace PocketMan
         }
 
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void PocketMan_KeyDown(object sender, KeyEventArgs e)
         {
             if ((e.KeyCode == System.Windows.Forms.Keys.Up))
             {
@@ -73,19 +71,33 @@ namespace PocketMan
 
         }
 
+        // Declare the SoundPlayer at the class level
+        private SoundPlayer player;
+
         // select file + play button
         private void button3_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "WAV files (*.wav)|*.wav";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog.FileName;
                 string fileName = Path.GetFileName(openFileDialog.FileName);
-                SoundPlayer player = new SoundPlayer();
-                player.SoundLocation = filePath;
-                player.Load();
-                player.Play();
-                label4.Text = "Currently playing " + fileName;
+
+                player = new SoundPlayer(); // Use the class level instance
+
+                try
+                {
+                    player.SoundLocation = filePath;
+                    player.Load();
+                    player.Play();
+                    label4.Text = "Currently playing " + fileName;
+                }
+                catch
+                {
+                    MessageBox.Show("Are you sure this is a .WAV file?");
+                }
+          
             }
 
         }
@@ -93,10 +105,12 @@ namespace PocketMan
         // stop button
         private void button2_Click(object sender, EventArgs e)
         {
-            player.Stop();
-            MessageBox.Show("Stopped by user.");
+            if (player != null)
+            {
+                player.Stop();
+                label4.Text = "No file playing.";
+                MessageBox.Show("Stopped by user.");
+            }
         }
-
-
     }
 }

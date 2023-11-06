@@ -1,6 +1,6 @@
 ﻿namespace PocketMan
 {
-    partial class Form1
+    partial class PocketMan
     {
         /// <summary>
         /// Required designer variable.
@@ -40,10 +40,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.freq = new System.Windows.Forms.TabPage();
             this.Other = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.freq = new System.Windows.Forms.TabPage();
             this.mainWindowTab.SuspendLayout();
             this.Info.SuspendLayout();
             this.Audio.SuspendLayout();
@@ -74,8 +74,9 @@
             // 
             this.label1.Location = new System.Drawing.Point(7, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 47);
-            this.label1.Text = "PocketMan";
+            this.label1.Size = new System.Drawing.Size(230, 164);
+            this.label1.Text = "PocketMan Developer Build\r\nPre-alpha 1\r\n\r\nCurrently working:\r\n - Audio Player\r\n  " +
+                "  - SystemSounds\r\n    - WAV file";
             // 
             // Audio
             // 
@@ -114,11 +115,12 @@
             // 
             this.label4.Location = new System.Drawing.Point(7, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(155, 48);
-            this.label4.Text = "No file currently selected";
+            this.label4.Size = new System.Drawing.Size(155, 73);
+            this.label4.Text = "No file playing.";
             // 
             // label3
             // 
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(7, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 20);
@@ -126,6 +128,7 @@
             // 
             // label2
             // 
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(7, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 20);
@@ -160,6 +163,13 @@
             this.radioButton1.Text = "Beep";
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
+            // freq
+            // 
+            this.freq.Location = new System.Drawing.Point(0, 0);
+            this.freq.Name = "freq";
+            this.freq.Size = new System.Drawing.Size(232, 268);
+            this.freq.Text = "Freq";
+            // 
             // Other
             // 
             this.Other.Controls.Add(this.label5);
@@ -179,14 +189,7 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // freq
-            // 
-            this.freq.Location = new System.Drawing.Point(0, 0);
-            this.freq.Name = "freq";
-            this.freq.Size = new System.Drawing.Size(240, 271);
-            this.freq.Text = "Freq";
-            // 
-            // Form1
+            // PocketMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -194,9 +197,8 @@
             this.ClientSize = new System.Drawing.Size(240, 294);
             this.Controls.Add(this.mainWindowTab);
             this.KeyPreview = true;
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
+            this.Name = "PocketMan";
+            this.Text = "Welcome";
             this.mainWindowTab.ResumeLayout(false);
             this.Info.ResumeLayout(false);
             this.Audio.ResumeLayout(false);
